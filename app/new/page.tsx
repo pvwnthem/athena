@@ -1,4 +1,6 @@
 'use client'
+import { createSnippet } from '@/services/snippet.service';
+import { Snippet } from '@/types/snippet.type';
 import React from 'react'
 
 export default function Page() {
@@ -7,7 +9,7 @@ export default function Page() {
         const formData = new FormData(e.currentTarget);
         const code = formData.get("code");
         const language = formData.get("language");
-        console.log(code, language);
+        createSnippet({ content: code as string, language: language as string } as Snippet)
       }
     return (
         <>
