@@ -1,4 +1,4 @@
-import { Schema, model } from 'mongoose';
+import { Schema, model, models } from 'mongoose';
 
 const snippetSchema = new Schema({
     title: {
@@ -20,4 +20,4 @@ const snippetSchema = new Schema({
     }
 });
 
-export default model('Snippet', snippetSchema) || model('Snippet'); 
+export default model('Snippet', snippetSchema) || models.Snippet; 
