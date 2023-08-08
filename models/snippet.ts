@@ -14,6 +14,10 @@ const snippetSchema = new Schema({
         type: String,
         required: true
     },
+    id: {
+        type: String,
+        required: true
+    }
 });
 
 export default model('Snippet', snippetSchema) || model('Snippet'); 
