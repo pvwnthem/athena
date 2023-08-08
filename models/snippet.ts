@@ -20,4 +20,4 @@ const snippetSchema = new Schema({
     }
 });
 
-export default model('Snippet', snippetSchema) || models.Snippet; 
+export default models.Snippet || model('Snippet', snippetSchema); 
