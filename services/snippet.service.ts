@@ -11,26 +11,19 @@ export async function createSnippet(snippet: Snippet) {
     snippet.id = crypto.randomBytes(16).toString('hex');
 
     const result = await SnippetModel.create(snippet);
-    return result;
+    return JSON.parse(JSON.stringify(result));
 }
 
 export async function getAllSnippets() {
     await connect();
 
     const result = await SnippetModel.find();
-    return result;
+    return JSON.parse(JSON.stringify(result));
 }
 
 export async function getSnippetById(id: string) {
     await connect();
 
     const result = await SnippetModel.findById(id);
-    return result;
-}
-
-export async function updateSnippetById(id: string, snippet: Snippet) {
-    await connect();
-
-    const result = await SnippetModel.findByIdAndUpdate(id, snippet, { new: true });
-    return result;
+    return JSON.parse(JSON.stringify(result));
 }
