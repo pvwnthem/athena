@@ -21,9 +21,9 @@ export async function getAllSnippets() {
     return JSON.parse(JSON.stringify(result));
 }
 
-export async function getSnippetById(id: string) {
+export async function getSnippet(id: string) {
     await connect();
 
-    const result = await SnippetModel.findById(id);
+    const result = await SnippetModel.findOne({id});
     return JSON.parse(JSON.stringify(result));
 }
