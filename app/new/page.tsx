@@ -18,7 +18,7 @@ export default function Page() {
                 <div className='w-1/2 h-1 bg-red-800 rounded-full my-2'></div>
                 <form onSubmit={handleSubmit} className='md:w-1/2 flex flex-col rounded py-6 px-24 shadow-lg space-y-2 items-center justify-center'>
                     <label htmlFor="code" className='text-xl self-start font-semibold'>Code</label>
-                    <textarea className="w-full border border-red-800 rounded" name="code" />
+                    <textarea className="h-32 w-full border border-red-800 rounded" name="code" />
                     <label htmlFor="code" className='text-xl self-start font-semibold'>Language</label>
                     <select id="language" name="language" className="w-full self-start shadow-md rounded bg-white py-2 px-2 text-red-800">
                         <option value="javascript">JavaScript</option>
